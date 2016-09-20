@@ -9,28 +9,71 @@
 class Book
 {
     // The fields.
+    /**
+     * 2.85 add pages variable
+     */
     private String author;
     private String title;
+    private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
+     * 2.85 added pages field
      */
-    public Book(String bookAuthor, String bookTitle)
+    public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = bookPages;
     }
 
-    // Accessor for the String Fields
-    public String getTitle ()
+   
+    /**
+     * 2.83 Accessor for the title field
+     */
+    public String getTitle()
     {
        return title;
     }
     
-    public String getAuthor ()
+     /**
+     * 2.83 Accessor for the author field
+     */
+    public String getAuthor()
     {
         return author;
     }
     
+     /**
+     * 2.85 Accessor for the pages field
+     */
+    public String getPages()
+    {
+        return pages;
+    }
+       
+     /**
+     * 2.84Print utility for the title field
+     */
+    public void printTitle()
+    {
+        System.out.println("Title: " + title);
+    }
+    
+     /**
+     * 2.84 Print Feature for the author field
+     */
+    public void printAuthor()
+    {
+        System.out.println("Author: " + author);
+    }
+    
+    /**
+     * 2.85 Print Feature for the pages field
+     */
+    public void printPages()
+    {
+        System.out.println("Number of pages: " + pages);
+    }
 }
